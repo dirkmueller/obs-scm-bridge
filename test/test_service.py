@@ -147,7 +147,7 @@ def test_creates_packagelist(auto_container_per_test: ContainerData):
         )
 
 
-LFS_REPO = "https://gitea.opensuse.org/adrianSuSE/git-example-lfs"
+LFS_REPO = "https://src.opensuse.org/adrianSuSE/git-example-lfs"
 
 
 @pytest.mark.parametrize("fragment", ["", "#dc16ed074a49fbd104166d979b3045cc5d84db04"])
