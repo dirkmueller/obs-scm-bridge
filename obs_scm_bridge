@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # scm (only git atm) cloning and packaging for Open Build Service
-# 
+#
 # (C) 2021 by Adrian Schröter <adrian@suse.de>
 #
 # This program is free software; you can redistribute it and/or
@@ -296,7 +296,7 @@ class ObsGit(object):
 
     def get_debian_origtar(self) -> None:
         if os.path.isfile(self.outdir + "/debian/control"):
-            # need up get all tags 
+            # need up get all tags
             if not self.subdir:
                 self.fetch_tags()
             cmd = [ export_debian_orig_from_git, self.outdir ]
@@ -492,6 +492,7 @@ if __name__ == '__main__':
     parser.add_argument('--projectscmsync',
                         help='add also reference information of a project git for a package clone')
     parser.add_argument('--debug',
+                        action='store_true',
                         help='verbose debug mode')
     args = vars(parser.parse_args())
 
